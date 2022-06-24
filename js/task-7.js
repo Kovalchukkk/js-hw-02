@@ -13,12 +13,12 @@ const addLogin = function (allLogins, login) {
     if (isLoginUnique(allLogins, login)) {
       allLogins.push(login);
       return 'Логін успішно доданий!';
-    } else {
-      return 'Такий логін вже використовується!';
     }
-  } else {
-    return 'Помилка! Логін повинен бути від 4 до 16 символів';
+    return 'Такий логін вже використовується!';
+    
   }
+  return 'Помилка! Логін повинен бути від 4 до 16 символів';
+  
 };
 
 console.log(addLogin(logins, 'Ajax')); // 'Логін успішно доданий!'
